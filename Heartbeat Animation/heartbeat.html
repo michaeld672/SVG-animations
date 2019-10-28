@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+<title>CodePen - Machine that goes Ping!</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Exo+2:700|Source+Code+Pro:400,600,700&amp;display=swap'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.7.1/gridlex.css'>
+<style>
+  .heartbeat {
+  width: 500px;
+  height: 100px;
+  border: 2px solid green;
+  background-color: black;
+  position: relative;
+}
+.heartbeat:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right:0;
+  bottom: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 50%,  
+    rgba(0, 0, 0, 0) 100%
+  );
+  background-repeat: repeat-x;
+  background-size:100% 100%;
+  background-position: 0 0;
+  animation: graph 3s linear infinite;
+}
+@keyframes graph {
+  100% {
+    background-position: 600px 0;
+  }
+}
+</style>
+</head>
+<body translate="no">
+<div class="heartbeat">
+<svg  height= "50px" width="100%" viewBox="0 0 20 10" preserveAspectRatio="none">
+<polyline fill="none" stroke="gold" stroke-width="3" points="0,45 40,45 44,31 49,44 55,46 61,52 83,8 90,90 100,44 115,44 125,40 139,45, 140,45,
+                                         150,45 180,65 194,31 199,44 205,46 211,52 233,8 240,90 250,44 265,44 275,10 290,45 300,45, 
+                                         320,45 360,65 394,31 399,44 405,46 411,52 433,8 440,90 450,44 465,44 475,40 490,45 500,45 ">
+</svg>
+</div>
+</body>
+</html>

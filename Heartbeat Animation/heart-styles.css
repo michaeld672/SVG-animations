@@ -1,0 +1,45 @@
+.heartbeat {
+    width: 2000px;
+    height: 600px;
+    border: 2px solid green;
+    background-color: black;
+    position: relative;
+  }
+
+  .heartbeat:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right:0;
+    bottom: 0;
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 1) 50%,  
+      rgba(0, 0, 0, 0) 100%
+    );
+    background-repeat: repeat-x;
+    background-size:100% 100%;
+    background-position: 0 0;
+    animation: graph 2s linear infinite;
+  }
+
+  .heartbeat:after {
+    content: "";
+    position: relative;
+    left: 50;
+    top: 100;
+    right:0;
+    bottom: 0;
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 1) 50%,  
+      rgba(0, 0, 0, 0) 100%
+    );
+    background-repeat: repeat-x;
+    background-size:100% 100%;
+    background-position:  50;
+    animation: graph 2s linear infinite;
+  }
